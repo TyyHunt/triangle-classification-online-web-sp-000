@@ -12,7 +12,7 @@ class Triangle
     sides_2_3 = @sides_of_triangle[1] + @sides_of_triangle[2]
     sides_1_3 = @sides_of_triangle[0] + @sides_of_triangle[2]
 
-    if (@sides_of_triangle.none? {|side| side <= 0})  && 
+    if (@sides_of_triangle.none? {|side| side <= 0})  &&
       (sides_1_2 > @sides_of_triangle[2] && sides_1_3 > @sides_of_triangle[1] && sides_2_3 > @sides_of_triangle[0])
       true
     else
