@@ -19,4 +19,22 @@ class Triangle
       false
     end
   end
+
+  def kind
+    if valid?
+      if @sides_of_triangle.uniq.length == 1
+        return :equilateral
+      elsif @sides_of_triangle.uniq.length == 2
+        return :isoceles
+      else 
+        return :scalene
+      end
+    else
+      raise TriangleError
+    end
+  end
+      
+end
+
+class TriangleError < StandardError
 end
