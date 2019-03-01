@@ -26,14 +26,14 @@ class Triangle
         return :equilateral
       elsif @sides_of_triangle.uniq.length == 2
         return :isoceles
-      else 
+      else
         return :scalene
       end
     else
       raise TriangleError
     end
   end
-      
+
 end
 
 class TriangleError < StandardError
